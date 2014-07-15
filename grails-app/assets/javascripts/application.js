@@ -7,6 +7,7 @@
 //
 //= require jquery/dist/jquery
 //= require angular/angular
+//= require grangApp
 //= require bootstrap/dist/js/bootstrap
 //= require_tree .
 //= require_self
