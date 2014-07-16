@@ -13,8 +13,10 @@ import com.grang.Storage
 
 class BootStrap {
 
+	def grailsApplication
+
     def init = { servletContext ->
-    	/*JSON.registerObjectMarshaller( Phone ) { Phone phone ->
+    	JSON.registerObjectMarshaller( Phone ) { Phone phone ->
 			return [
 					age : phone.age,
 					id : phone.phoneId,
@@ -86,7 +88,7 @@ class BootStrap {
 				phoneDetail.save(flush:true, failOnError:true)
 
 			}
-		}*/
+		}
     }
 	
     def destroy = {
