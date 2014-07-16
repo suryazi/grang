@@ -12,6 +12,12 @@
 //= require angular-route/angular-route
 //= require grangApp
 //= require bootstrap/dist/js/bootstrap
+//= require app/animations
+//= require app/app
+//= require app/controller.js
+//= require app/directives.js
+//= require app/filters.js
+//= require app/services.js
 //= require_tree .
 //= require_self
 
