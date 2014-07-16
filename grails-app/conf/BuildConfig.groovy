@@ -51,6 +51,7 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
+        compile 'commons-beanutils:commons-beanutils:1.8.3'
     }
 
     plugins {
@@ -61,6 +62,8 @@ grails.project.dependency.resolution = {
         compile ":scaffolding:2.1.2"
         compile ':cache:1.1.7'
         compile ":asset-pipeline:1.9.3"
+
+        compile ":gson:1.1.4"
 
         //plugins for testing app
         test ":karma-test-runner:0.2.1"
