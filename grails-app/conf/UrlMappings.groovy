@@ -10,6 +10,15 @@ class UrlMappings {
 			controller = "phones"
 			action = "showPhone"
 		}
+
+		"/books/books.json" {
+			controller = "book"
+		}
+
+		"/books/${bookId}.json" {
+			controller = "book"
+			action="showBook"
+		}
 		
         "/"(view:"/index")
 	}

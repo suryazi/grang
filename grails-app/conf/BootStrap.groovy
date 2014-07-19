@@ -10,12 +10,17 @@ import com.grang.Phone
 import com.grang.PhoneDetail
 import com.grang.SizeAndWeight
 import com.grang.Storage
+import com.grang.Book
 
 class BootStrap {
 
 	def grailsApplication
 
     def init = { servletContext ->
+
+		new Book(title:'Title1', author:'Ben', price:10).save(flush:true, failOnError:true)
+    	new Book(title:'Title2', author:'Author', price:20).save(flush:true, failOnError:true)
+
     	JSON.registerObjectMarshaller( Phone ) { Phone phone ->
 			return [
 					age : phone.age,

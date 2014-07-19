@@ -5,8 +5,29 @@
 var phonecatServices = angular.module('phonecatServices', ['ngResource']);
 
 phonecatServices.factory('Phone', ['$resource',
-  function($resource){
-    return $resource('phones/:phoneId.json', {}, {
-      query: {method:'GET', params:{phoneId:'phones'}, isArray:true}
-    });
-  }]);
+    function($resource) {
+        return $resource('phones/:phoneId.json', {}, {
+            query: {
+                method: 'GET',
+                params: {
+                    phoneId: 'phones'
+                },
+                isArray: true
+            }
+        });
+    }
+]);
+
+phonecatServices.factory('Book', ['$resource',
+    function($resource) {
+        return $resource('books/:bookId.json', {}, {
+            query: {
+                method: 'GET',
+                params: {
+                    bookId: 'books'
+                },
+                isArray: true
+            }
+        });
+    }
+]);
