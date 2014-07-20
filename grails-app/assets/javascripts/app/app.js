@@ -26,8 +26,15 @@ phonecatApp.config(['$routeProvider',
             templateUrl: 'partials/book-list.html',
             controller: 'BookListCtrl'
         }).
+        when('/newBook', {
+            templateUrl: 'partials/newBook.html'
+        }).
         when('/books/:bookId', {
             templateUrl: 'partials/book-detail.html',
+            controller: 'BookDetailCtrl'
+        }).
+        when('/editBook/:bookId', {
+            templateUrl: 'partials/editBook.html',
             controller: 'BookDetailCtrl'
         }).
         otherwise({
