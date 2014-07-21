@@ -30,12 +30,17 @@ phonecatControllers.controller('BookListCtrl', ['$scope', 'Book',
         $scope.books = Book.query();
         $scope.orderProp = 'title';
     }
+
 ]);
 
-phonecatControllers.controller('BookDetailCtrl', ['$scope', '$routeParams', 'Book',
-    function($scope, $routeParams, Book) {
+phonecatControllers.controller('BookDetailCtrl', ['$scope', '$http', '$routeParams', 'Book',
+    function($scope, $http, $routeParams, Book) {
         $scope.book = Book.get({
             bookId: $routeParams.bookId
         });
+
+        $scope.delBook = function() {
+            console.log('delBook');
+        }
     }
 ]);
